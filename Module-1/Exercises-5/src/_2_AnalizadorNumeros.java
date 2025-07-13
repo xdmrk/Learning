@@ -5,15 +5,15 @@ public class _2_AnalizadorNumeros {
         Scanner entrada = new Scanner(System.in); // Objeto para leer entradas del usuario
         int opcion, numero;
 
-        do{
+        do{ //Muestre al menos una vez el menú
             System.out.println("\n¡¡ MENÚ !!");
             System.out.println("1. Analizar un solo número");
             System.out.println("2. Generar secuencia de números");
             System.out.println("0. Salir");
             System.out.print("Ingrese una opcion: ");
-            opcion = entrada.nextInt();
+            opcion = entrada.nextInt(); // Toma de opcion (usuario)
 
-            switch (opcion) {
+            switch (opcion) { // Case por opcion registrada
                 case 1: //positivo, par, <>=100.
                     System.out.print("Ingrese un numero: ");
                     numero = entrada.nextInt();
@@ -40,7 +40,7 @@ public class _2_AnalizadorNumeros {
                     }else{
                         System.out.print(" es igual a 100\n\n");
                     }                                    
-                    break;
+                    break; // Rompe el switch
             
                 case 2:
                     String pOi;
@@ -51,41 +51,38 @@ public class _2_AnalizadorNumeros {
                     int nF = entrada.nextInt();
                     System.out.print("Desea ver solo los numeros pares o los impares: ");
 
-                    entrada.nextLine(); // reiniciamos el scanner
+                    entrada.nextLine(); // Limpiamos el buffer o no registra la variable pOi
                     //.replaceAll: elimina espacios en blanco (espacios, tabs, saltos de línea, etc.) // +: uno o mas
                     //toLowerCase(): convierte a minuscula
                     pOi = entrada.nextLine().toLowerCase().replaceAll("\\s+", "");
 
-                    for (int i = nI; i <= nF; i++){                      
+                    for (int i = nI; i <= nF; i++){ // Para                 
                         if (pOi.equals("par") || pOi.equals("pares")){
-                            if (i % 2 == 0){
+                            if (i % 2 == 0){ // Que solo entren los pares
                                 System.out.print(i);
                                 System.out.print(" ");
                             }else{
-                                continue;
+                                continue; // Si no es par que salte a la sigiente iteracion
                             }
                         }else if(pOi.equals("impar") || pOi.equals("impares")){
-                            if(i % 2 != 0){
+                        // equals(): compara String ya que == solo compara numeros o primitivos
+                            if(i % 2 != 0){ // Que solo entren los impares
                                 System.out.print(i);
+                                System.out.print(" ");
                             }else{
-                                continue;
+                                continue; // Si no es par que salte a la sigiente iteracion
                             }                                    
-                        }else{
+                        }else{ //Entra si no ingresa una opcion valida en nI, nF o pOi
                             System.out.println("Debe ingresar si desea ver los pares o los impares");
-                            break;
+                            break; // Devuelve al menu principal
                         }
-                    }           
-            
-                default:
-                    break;
-            }
-            
-        }while(opcion >= 0 && opcion < 3 ); // Mientras este entre las opciones, se repetira
-
-
-
-
-        entrada.close(); // Cerramos el scanner
-        
+                    }                       
+                default: // Cualquier otra opcion
+                    System.out.printf("%d no es una opcion valida", opcion);                     
+                    continue; // Regresa al menú
+            }            
+        }while(opcion != 0); // Mientras este entre las opciones, se repetira
+        System.out.println("Saliendo del programa...."); // Mensaje al salir del programa
+        entrada.close(); // Cerramos el scanner        
     }
 }
