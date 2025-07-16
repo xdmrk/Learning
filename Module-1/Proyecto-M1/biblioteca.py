@@ -1,4 +1,4 @@
-from prettytable import PrettyTable
+from prettytable import PrettyTable #Install for termianñ
 
 #Base de datos en memoria
 libros = [    
