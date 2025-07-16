@@ -26,10 +26,8 @@ public class RegistroEstudiantes {
             System.out.println("--------------------------------------------");
             System.out.println("""
                     1. Registrar datos de un estudiante
-                    2. Mostrar datos del estudiante actual
-                    3. Calcular promedio de notas del estudiante actual
-                    4. Validar nota
-                    5. Validar nombre
+                    2. Mostrar datos del estudiante
+                    3. Calcular promedio de notas
                     0. Salir
                     """);
             System.out.print("Ingrese su opcion: ");
@@ -47,14 +45,6 @@ public class RegistroEstudiantes {
 
                 case 3:
                     System.out.println(calcularPromedio(sc));
-                    break;
-
-                case 4:
-
-                    break;
-
-                case 5:
-
                     break;
 
                 case 0:
@@ -140,21 +130,21 @@ public class RegistroEstudiantes {
     }
 
     private static boolean validarNombre(Scanner sc) {
-         
-        do{
+
+        do {
             System.out.print("Ingrese el nombre completo del estudiante: ");
-                String validacion = sc.nextLine();
+            String validacion = sc.nextLine();
 
             if (validacion == null || validacion.trim().isEmpty()) {
                 System.out.println("Error: El nombre no puede estar vacío");
-                //.trim(): Elimina espacios en blanco al inicio y final   |   .isEmpty(): Verifica si la cadena está vacía
-                
+                // .trim(): Elimina espacios en blanco al inicio y final | .isEmpty(): Verifica
+                // si la cadena está vacía
+
             } else {
-                nombre = validacion.trim(); 
-                return true;
+                nombre = validacion.trim();
+                return true; // Hasta que sea valido no returna
             }
-        }while(true);
-        
-        
+        } while (true); // Repetira hasta que sea True
+
     }
 }
