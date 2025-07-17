@@ -8,7 +8,7 @@
 - [Declaración y Uso de Constantes (`final`)](Declaración-y-Uso-de-Constantes-final)
 
 [Conversión de Tipos (Type Casting)](#conversión-de-tipos-type-casting)
-- [Conversión Implícita (Widening/Ampliación)](#1-conversión-implícita-widening-ampliación)
+- [Conversión Implícita (Widening/Ampliación)](#conversión-implícita-widening-ampliación)
 - [Conversión Explícita (Casting/Narrowing/Estrechamiento)](#Conversión-Explícita-castingnarrowingconversionestrechamiento)
 
 [Operadores en Java](#Operadores-en-Java)
@@ -317,7 +317,7 @@ Una **constante** es una variable cuyo valor, una vez asignado, no puede ser mod
 
 A veces, necesitas convertir un valor de un tipo de dato a otro. Java maneja esto de dos formas:
 
-### 1. Conversión Implícita (Widening Conversion - Ampliación)
+### Conversión Implícita (Widening Conversion - Ampliación)
 
 - Ocurre automáticamente cuando conviertes un tipo de dato de "menor capacidad" a uno de "mayor capacidad".
 - No hay riesgo de pérdida de datos.
@@ -333,7 +333,7 @@ A veces, necesitas convertir un valor de un tipo de dato a otro. Java maneja est
 
 <br>  
 
-### 2. Conversión Explícita (Casting - Narrowing Conversion - Estrechamiento)
+### Conversión Explícita (Casting - Narrowing Conversion - Estrechamiento)
 
 - Ocurre cuando conviertes un tipo de dato de "mayor capacidad" a uno de "menor capacidad".
 - Requiere que le digas a Java explícitamente que estás de acuerdo con la posible pérdida de datos.
