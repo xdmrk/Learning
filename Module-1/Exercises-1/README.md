@@ -5,22 +5,22 @@
 - [Java es un Lenguaje Fuertemente Tipado](#Java-es-un-Lenguaje-Fuertemente-Tipado)
 - [Tipos de Datos Primitivos](#Tipos-de-Datos-Primitivos)
 - [Inferencia de Tipo con var](#Inferencia-de-Tipo-con-var)
-- [Declaración y Uso de Constantes (final)](Declaración-y-Uso-de-Constantes (final))
+- [Declaración y Uso de Constantes (final)](Declaración-y-Uso-de-Constantes-(final))
 
-[Conversión de Tipos (Type Casting)](#Conversión-de-Tipos (Type Casting))
+[Conversión de Tipos (Type Casting)](#Conversión-de-Tipos-(Type-Casting))
 - [Conversión Implícita (Widening/Ampliación)](#Conversión-Implícita (Widening Conversion - Ampliación))
-- [Conversión Explícita (Casting/Narrowing/Estrechamiento)](#Conversión-Explícita (Casting - Narrowing Conversion - Estrechamiento))
+- [Conversión Explícita (Casting/Narrowing/Estrechamiento)](#Conversión-Explícita-(Casting-Narrowing-Conversion-Estrechamiento))
 
 [Operadores en Java](#Operadores-en-Java)
 - [Operadores Aritméticos](#Operadores-Aritméticos)
-- [Operadores de acumulación (Incremento y Decremento)](#Operadores-de-acumulación (Incremento y Decremento))
+- [Operadores de acumulación (Incremento y Decremento)](#Operadores-de-acumulación-(Incremento-y-Decremento))
 - [Operadores de asignación compuesta](#Operadores-de-asignación-compuesta)
 - [Precedencia de operadores](#Precedencia-de-operadores)
 
 [Entrada y Salida de Datos por Consola y Diferencia Primitivos vs. Objetos](#Entrada-y-Salida-de-Datos-por-Consola-y-Diferencia-Primitivos-vs.-Objetos)
 - [Leyendo Entrada del Usuario con `Scanner`](#Leyendo-Entrada-del-Usuario-con-Scanner)
 - [Salida de Datos por Consola `(System.out)`](#Salida-de-Datos-por-Consola-(System.out))
-- [Primitivos vs. Clases Envolventes (Wrapper Classes)](#Primitivos-vs.-Clases-Envolventes (Wrapper Classes))
+- [Primitivos vs. Clases Envolventes (Wrapper Classes)](#Primitivos-vs.-Clases-Envolventes-(Wrapper-Classes))
   
 <br>  
 
