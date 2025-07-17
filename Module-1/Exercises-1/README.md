@@ -19,8 +19,8 @@
 
 [Entrada y Salida de Datos por Consola y Diferencia Primitivos vs. Objetos](#Entrada-y-Salida-de-Datos-por-Consola-y-Diferencia-Primitivos-vs.-Objetos)
 - [Leyendo Entrada del Usuario con `Scanner`](#Leyendo-Entrada-del-Usuario-con-Scanner)
-- [Salida de Datos por Consola `(System.out)`](#Salida-de-Datos-por-Consola-System.out)
-- [Primitivos vs. Clases Envolventes (Wrapper Classes)](#Primitivos-vs.-Clases-Envolventes-Wrapper-Classes)
+- [Salida de Datos por Consola `(System.out)`](#salida-de-datos-por-consola-systemout)
+- [Primitivos vs. Clases Envolventes (Wrapper Classes)](#primitivos-vs-clases-envolventes-wrapper-classes)
   
 <br>  
 
