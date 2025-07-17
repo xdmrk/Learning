@@ -13,7 +13,7 @@
 
 [Operadores en Java](#Operadores-en-Java)
 - [Operadores Aritméticos](#Operadores-Aritméticos)
-- [Operadores de acumulación (Incremento y Decremento)](#Operadores-de-acumulación-(Incremento-y-Decremento))
+- [Operadores de acumulación (Incremento y Decremento)](#operadores-de-acumulaci%C3%B3n-incremento-y-decremento)
 - [Operadores de asignación compuesta](#Operadores-de-asignación-compuesta)
 - [Precedencia de operadores](#Precedencia-de-operadores)
 
