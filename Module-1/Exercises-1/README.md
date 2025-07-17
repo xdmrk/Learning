@@ -17,7 +17,7 @@
 - [Operadores de asignación compuesta](#Operadores-de-asignación-compuesta)
 - [Precedencia de operadores](#Precedencia-de-operadores)
 
-[Entrada y Salida de Datos por Consola y Diferencia Primitivos vs. Objetos](#Entrada-y-Salida-de-Datos-por-Consola-y-Diferencia-Primitivos-vs.-Objetos)
+[Entrada y Salida de Datos por Consola y Diferencia Primitivos vs. Objetos](#Entrada-y-Salida-de-Datos-por-Consola-y-Diferencia-Primitivos-vs-Objetos)
 - [Leyendo Entrada del Usuario con `Scanner`](#Leyendo-Entrada-del-Usuario-con-Scanner)
 - [Salida de Datos por Consola `(System.out)`](#salida-de-datos-por-consola-systemout)
 - [Primitivos vs. Clases Envolventes (Wrapper Classes)](#primitivos-vs-clases-envolventes-wrapper-classes)
