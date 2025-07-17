@@ -1,25 +1,36 @@
-### 1.1. ¿Qué son las Variables?
+# Variables
 
-Una **variable** es un espacio en la memoria de la computadora que tiene un nombre, un tipo de dato y puede almacenar un valor que puede cambiar durante la ejecución del programa.
+Una **variable** en Java es un contenedor que almacena datos en la memoria durante la ejecución de un programa. Las variables tienen un nombre (identificador), un tipo de dato y un valor que puede cambiar durante la ejecución del programa.
+Inicialmente solo se trabajara con **variables locales** declaradas dentro de métodos, constructores o bloques.
+```Java
+  public static void main(String[] args) {
+    int contador = 0;          // Esta es una variable local
+    String mensaje = "Hola";   // Esta también es local
+    
+    System.out.println(contador);
+}
+  ```
+
+<br> 
 
 - **Declaración**: Le dices a Java qué tipo de dato va a almacenar tu variable y le das un nombre.
   
   ```Java
-  int edad; // Declara una variable 'edad' de tipo entero
-  double precio; // Declara una variable 'precio' de tipo decimal
+  int edad;       // Declara una variable 'edad' de tipo entero
+  double precio;  // Declara una variable 'precio' de tipo decimal
   ```
 
 - **Inicialización**: Le das un valor inicial a la variable.
 
   ```Java
-  int edad = 30; // Declara e inicializa 'edad' con el valor 30
+  int edad = 30;         // Declara e inicializa 'edad' con el valor 30
   double precio = 99.99; // Declara e inicializa 'precio' con el valor 99.99
   ```
 
 - **Asignación**: Cambias el valor de una variable ya declarada.
 
   ```Java
-  edad = 31; // Cambia el valor de 'edad' a 31
+  edad = 31;      // Cambia el valor de 'edad' a 31
   precio = 85.50; // Cambia el valor de 'precio' a 85.50
   ```
 
@@ -29,27 +40,31 @@ Una **variable** es un espacio en la memoria de la computadora que tiene un nomb
   - Son sensibles a mayúsculas y minúsculas (`miVariable` es diferente de `mivariable`).
   - Se recomienda usar `camelCase` (la primera palabra en minúscula y las siguientes palabras empiezan con mayúscula, ej. `numeroDeEstudiantes`).
   - No pueden ser palabras clave de Java (ej. `int`, `class`, `public`).
+ 
+<br>  
 
-### 1.2. Java es un Lenguaje Fuertemente Tipado
+### Java es un Lenguaje Fuertemente Tipado
 
 Java es un lenguaje **fuertemente tipado** (o de tipado estático). Esto significa que:
 
 - Cada variable tiene un `tipo de dato definido` (ej. `int`, `double`, `String`).
 - El tipo de una variable se verifica en **tiempo de compilación** (antes de que el programa se ejecute).
-- Una vez que una variable es declarada con un tipo, **solo puede almacenar valores de ese tipo**. No puedes asignar un valor de un tipo incompatible sin realizar una conversión explícita (casting).
+- Una vez que una variable es declarada con un tipo, **solo puede almacenar valores de ese tipo**. No puedes asignar un valor de un tipo incompatible sin realizar una conversión explícita ([casting](#Conversión-de-Tipos-(Type-Casting)))
 
 ```Java
-int contador = 10; // 'contador' es de tipo int
+int contador = 10;   // 'contador' es de tipo int
 
-contador = 5.5; // ERROR de compilación: No puedes asignar un double a un int directamente
+contador = 5.5;      // ERROR de compilación: No puedes asignar un double a un int directamente
 String nombre = 123; // ERROR de compilación: No puedes asignar un int a un String
 ```
 
 Esta característica ayuda a detectar muchos errores comunes (como intentar operar con tipos incompatibles) **antes** de que el programa llegue a ejecutarse, lo que hace que Java sea más robusto y menos propenso a errores en tiempo de ejecución relacionados con tipos de datos.
 
-### 1.3. Tipos de Datos Primitivos en Java
+<br>  
 
-Java tiene 8 tipos de datos primitivos, que son los bloques de construcción fundamentales para almacenar valores. Ocupan un tamaño fijo en memoria.
+### Tipos de Datos Primitivos
+
+Java tiene 8 tipos de datos primitivos (o tipos primitivos) que son los bloques básicos de almacenamiento de datos. Representan valores simples y no son objetos, por lo que son más eficientes en memoria y rendimiento que las clases envoltorias (Integer, Double, etc.).
 
 | Tipo de Dato | Descripción | Rango (aproximado) | Tamaño (bits) | Ejemplo de Uso | Por defecto | Sufijo |
 | --- | --- | --- | --: | --- | --- | --- |
@@ -65,15 +80,28 @@ Java tiene 8 tipos de datos primitivos, que son los bloques de construcción fun
 - **Ejemplos de uso de primitivos**:
 
   ```Java
-  int cantidad = 100;
-  double precioUnitario = 25.50;
-  boolean estaActivo = true;
-  char inicial = 'J';
-
-  System.out.println("Cantidad: " + cantidad);
-  System.out.println("Precio Unitario: " + precioUnitario);
-  System.out.println("¿Está activo?: " + estaActivo);
-  System.out.println("Inicial: " + inicial);
+  public class DatosPersona {
+    public static void main(String[] args) {
+        
+        byte edad = 30;
+        short añoNacimiento = 1993;
+        int idUsuario = 2147483647;                  // Máximo valor permitido
+        long tarjetaCredito = 1234_5678_9012_3456L;  // Nota la 'L' al final
+        
+        float estatura = 1.75f;                      // Nota la 'f' al final
+        double peso = 68.5;
+        
+        char genero = 'M';
+        boolean esEstudiante = true;
+        char unicode = '\u03A9';                      // Letra griega Omega (Ω)
+        
+        // Mostrando los valores
+        System.out.println("Edad: " + edad);
+        System.out.println("Estatura: " + estatura + "m");
+        System.out.println("Género: " + genero);
+        System.out.println("Es estudiante: " + esEstudiante);
+    }
+  }
   ```
 
 - **Los tipos de números enteros `byte`, `short`, `int`, `long`**
@@ -146,7 +174,7 @@ Java tiene 8 tipos de datos primitivos, que son los bloques de construcción fun
             """;
         ```
 
-      - E**spacios en blanco**: La indentación inicial se elimina automáticamente, pero cualquier espacio adicional dentro del bloque se mantiene.
+      - **Espacios en blanco**: La indentación inicial se elimina automáticamente, pero cualquier espacio adicional dentro del bloque se mantiene.
       - **Errores comunes**: Asegúrate de que el bloque de texto comience con `"""` seguido de un salto de línea y termine con `"""` en una nueva línea para evitar errores de compilación.
 
         ```Java
@@ -158,7 +186,9 @@ Java tiene 8 tipos de datos primitivos, que son los bloques de construcción fun
         System.out.println(mensaje);
         ```
 
-### 1.4. Inferencia de Tipo con `var` (Java 10+)
+<br>  
+
+### Inferencia de Tipo con `var` (Java 10+)
 
 A partir de Java 10, la palabra clave `var` te permite declarar variables locales sin especificar explícitamente su tipo, siempre y cuando el tipo pueda ser **inferido** por el compilador a partir de su valor inicial.
 
@@ -209,12 +239,23 @@ A partir de Java 10, la palabra clave `var` te permite declarar variables locale
     var contador = 0; // Infiere int
     // contador = "Hola"; // ERROR: No se puede asignar un String a un int
     ```
+    
+  - **No puede declararse varias variables a la vez**: No puedes declarar múltiples variables en una sola línea
 
+    ```Java
+     // Todos estos son errores
+    var x = 1, y = 2;
+    var a, b = 5;
+    var c = 0, d;
+    ```
+    
 - **Buenas Prácticas con `var`**:
   - Úsala cuando el tipo sea obvio y la concisión mejore la legibilidad.
   - Evita usarla si el tipo no es evidente para el lector.
 
-### 1.5. Declaración y Uso de Constantes (`final`)
+<br>  
+
+### Declaración y Uso de Constantes (`final`)
 
 Una **constante** es una variable cuyo valor, una vez asignado, no puede ser modificado durante la ejecución del programa. Se declaran usando la palabra clave `final`.
 
@@ -240,11 +281,13 @@ Una **constante** es una variable cuyo valor, una vez asignado, no puede ser mod
 
   Las constantes mejoran la legibilidad y evitan errores al usar valores fijos en el código.
 
-## 2. Conversión de Tipos (Type Casting)
+<br>  
+
+# Conversión de Tipos (Type Casting)
 
 A veces, necesitas convertir un valor de un tipo de dato a otro. Java maneja esto de dos formas:
 
-### 2.1. Conversión Implícita (Widening Conversion - Ampliación)
+### 1) Conversión Implícita (Widening Conversion - Ampliación)
 
 - Ocurre automáticamente cuando conviertes un tipo de dato de "menor capacidad" a uno de "mayor capacidad".
 - No hay riesgo de pérdida de datos.
@@ -252,13 +295,15 @@ A veces, necesitas convertir un valor de un tipo de dato a otro. Java maneja est
 
   ```Java
   int miEntero = 10;
-  double miDoble = miEntero; // Conversión implícita: 10 se convierte en 10.0
+  double miDouble = miEntero; // Conversión implícita: 10 se convierte en 10.0
 
   System.out.println("Entero: " + miEntero); // Salida: Entero: 10
   System.out.println("Doble: " + miDoble);   // Salida: Doble: 10.0
   ```
 
-### 2.2. Conversión Explícita (Casting - Narrowing Conversion - Estrechamiento)
+<br>  
+
+### 2) Conversión Explícita (Casting - Narrowing Conversion - Estrechamiento)
 
 - Ocurre cuando conviertes un tipo de dato de "mayor capacidad" a uno de "menor capacidad".
 - Requiere que le digas a Java explícitamente que estás de acuerdo con la posible pérdida de datos.
@@ -280,11 +325,13 @@ A veces, necesitas convertir un valor de un tipo de dato a otro. Java maneja est
   System.out.println("Byte (cast): " + numByte);     // Salida: Byte (cast): -56 (valor incorrecto)
   ```
 
-## 3. Operadores en Java
+<br>  
+
+# Operadores en Java
 
 Los operadores son símbolos que le dicen al compilador que realice distintas operaciones.
 
-### 3.1. Operadores Aritméticos
+### Operadores Aritméticos
 
 Realizan operaciones matemáticas básicas.
 
@@ -316,7 +363,9 @@ Realizan operaciones matemáticas básicas.
   System.out.println("Resultado 5: " + resultado5); // Salida: 2
   ```
 
-### 3.2 Operadores de acumulación (Incremento y Decremento)
+<br>  
+
+### Operadores de acumulación (Incremento y Decremento)
 
 | Operador | Descripción | Ejemplo | Resultado |
 | :-: | --- | :-: | :-: |
@@ -353,7 +402,9 @@ Realizan operaciones matemáticas básicas.
   System.out.println("d después de d--: " + d); // Output: 4
   ```
 
-### 3.3 Operadores de asignación compuesta
+<br>  
+
+### Operadores de asignación compuesta
 
 | Operador | Descripción | Ejemplo | Resultado |
 | :-: | --- | :-: | :-: |
@@ -375,14 +426,16 @@ Realizan operaciones matemáticas básicas.
   x %= 5; // Ahora x es 1
   ```
 
-### 3.4  Precedencia de operadores
+<br>  
+
+### Precedencia de operadores
 
 - La precedencia de operadores en Java determina el orden en que se evalúan los operadores en una expresión. Esto es crucial para asegurar que las operaciones se realicen en el orden correcto, similar a cómo se manejan las operaciones matemáticas.
 
   | Prioridad | Operador |
   | :-: | --- |
   | 1 | Operadores Postfijos: `expr++`, `expr--` |
-  | 2 | Operadores Unarios: `++expr`, `--expr`, `-expr` |
+  | 2 | Operadores Unarios: `++expr`, `--expr`, `-expr` (positivo ↔ negativo) |
   | 3 | Multiplicación y División: `*`, `/`, `%` |
   | 4 | Suma y Resta: `+`, `-` |
   | 5 | Asignación: `=`, `+=`, `-=`, `*=`, `/=`, `%=` |
@@ -404,19 +457,30 @@ Realizan operaciones matemáticas básicas.
   int c = 2;
 
   // Ejemplo de precedencia
-  int resultado = a + b * c; // Multiplicación se realiza primero
+  int resultado = a + b * c;       // Multiplicación se realiza primero
   System.out.println("Resultado: " + resultado); // Output: 20
 
   // Uso de paréntesis para alterar la precedencia
-  resultado = (a + b) * c; // Suma se realiza primero
+  resultado = (a + b) * c;         // Suma se realiza primero
   System.out.println("Resultado con paréntesis: " + resultado); // Output: 30
+
+  // Operador de Negación (-expr)
+  int num = 10;
+  int negativo = -num;              // Convierte 10 en -10
+  System.out.println(negativo);  // -10
+  
+  double temperatura = -5.5;
+  double positiva = -temperatura;  // Convierte -5.5 en 5.5
+  System.out.println(positiva);  // 5.5
   ```
   
   En el ejemplo anterior, sin paréntesis, la multiplicación se realiza antes que la suma debido a su mayor precedencia. Al usar paréntesis, forzamos a que la suma se realice primero.
 
-## 4. Entrada y Salida de Datos por Consola y Diferencia Primitivos vs. Objetos
+<br>  
 
-### 4.1. Leyendo Entrada del Usuario con `Scanner`
+# Entrada y Salida de Datos por Consola y Diferencia Primitivos vs. Objetos
+
+### Leyendo Entrada del Usuario con `Scanner`
 
 Para que tu programa pueda interactuar con el usuario y leer lo que este escribe en la consola, usamos la clase Scanner.
 
@@ -456,7 +520,9 @@ Para que tu programa pueda interactuar con el usuario y leer lo que este escribe
 
 - **Nota sobre `scanner.nextLine()` después de `nextInt()`/`nextDouble()`**: Cuando usas `nextInt()` o `nextDouble()`, estos métodos leen solo el número, dejando el caracter de "salto de línea" (`\n`) en el buffer de entrada. Si llamas a `nextLine()` inmediatamente después, este leerá ese `\n` vacío y no esperará la entrada real del usuario. Por eso, se suele añadir un `scanner.nextLine()`; extra para "consumir" ese salto de línea pendiente.
 
-### 4.2. Salida de Datos por Consola (`System.out`)
+<br>  
+
+### Salida de Datos por Consola (`System.out`)
 
 Ya usamos `System.out.println()` para imprimir mensajes. Java ofrece otras formas para controlar la salida en la consola:
 
@@ -508,7 +574,9 @@ Ya usamos `System.out.println()` para imprimir mensajes. Java ofrece otras forma
 
   - Observa cómo `%.2f` redondea el número y `%n` agrega un salto de línea.
 
-### 4.3. Primitivos vs. Clases Envolventes (Wrapper Classes)
+<br>  
+
+### Primitivos vs. Clases Envolventes (Wrapper Classes)
 
 Mientras que los tipos primitivos (`int`, `double`, `boolean`, etc.) almacenan directamente el valor, las **clases envolventes (Wrapper Classes)** son clases que "envuelven" a estos primitivos para darles funcionalidades de objeto. Esto es útil cuando necesitas tratar un valor primitivo como un objeto (ej. en colecciones de Java o cuando necesitas que un valor pueda ser `null`).
 
@@ -522,84 +590,3 @@ Mientras que los tipos primitivos (`int`, `double`, `boolean`, etc.) almacenan d
   - `char` -> `Character`
   - `boolean` -> `Boolean`
 - **Autoboxing y Unboxing**: Java realiza automáticamente las conversiones entre primitivos y sus wrappers cuando es necesario (ej. `Integer numero = 10;` esto es `autoboxing`).
-
-## Resumen de la Clase
-
-- Has aprendido a declarar y usar **variables** (incluyendo la inferencia de tipo con `var`) y **constantes** para almacenar datos en tu programa.
-- Comprendes que **Java es un lenguaje fuertemente tipado** y qué implica eso para el manejo de tipos de datos.
-- Conoces los **tipos de datos primitivos** más comunes (`int`, `double`, `boolean`, `char`) y la diferencia con `String` (que es un objeto).
-- Sabes cómo realizar **conversiones de tipo** (implícitas y explícitas) y las precauciones del casting.
-- Dominas los **operadores aritméticos** (`+`, `-`, `*`, `/`, `%`) y su precedencia.
-- Has tenido una primera aproximación a la **entrada de datos por consola** usando la clase `Scanner`, fundamental para crear programas interactivos.
-- Ahora conoces las diferentes opciones para la **salida de datos** (`System.out.print`, `System.out.println`, `System.out.printf`) y cómo formatear tu información.
-
-¡Estos son los bloques fundamentales de cualquier programa! Ahora, ¡a practicar lo aprendido!
-
-## Ejercicio: Conversor de Medidas Simple
-
-1. **Preparación**: Dentro de tu repositorio `java-course/module-01/`, crea una nueva carpeta llamada `class-02`. Dentro de `class-02`, crea un archivo Java llamado `ConversorMedidas.java`.
-2. **Requisitos del Programa**: El programa `ConversorMedidas.java` debe:
-    - Utilizar la clase `Scanner` para solicitar al usuario valores numéricos para las medidas.
-    - Declarar variables (puedes usar `var` donde sea apropiado) para almacenar la entrada del usuario y los resultados de las conversiones.
-    - Utilizar **constantes** (`final`) para los factores de conversión. Define las siguientes:
-      - `CM_POR_METRO = 100.0`
-      - `LIBRAS_POR_KG = 2.20462`
-      - `FACTOR_CELSIUS_FAHRENHEIT = 1.8`
-      - `OFFSET_FAHRENHEIT = 32.0`
-    - Realizar las siguientes conversiones y mostrar los  resultados en la consola:
-      - **Metros a Centímetros**:
-        - Solicita al usuario una cantidad en metros.
-        - Calcula la equivalencia en centímetros.
-        - Imprime el resultado usando `System.out.println()`.
-      - **Kilogramos a Libras**:
-        - Solicita al usuario una cantidad en kilogramos.
-        - Calcula la equivalencia en libras.
-        - Imprime el resultado usando `System.out.printf()` para mostrar solo 2 decimales.
-      - **Grados Celsius a Grados Fahrenheit**:
-        - Solicita al usuario una temperatura en grados Celsius.
-        - Calcula la equivalencia en grados Fahrenheit (`F = C × 1.8 + 32`).
-        - Imprime el resultado usando `System.out.print()` para que el siguiente mensaje continúe en la misma línea (si lo deseas) o `printf()` con 1 decimal.
-3. **Ejemplo de Interacción en Consola (Sugerido)**:
-
-    ```text
-    --- Bienvenido al Conversor de Medidas! ---
-
-    Ingrese la cantidad en metros: 15
-    15.0 metros equivalen a 1500.0 centímetros.
-
-    Ingrese la cantidad en kilogramos: 70
-    70.00 kilogramos equivalen a 154.32 libras.
-
-    Ingrese la temperatura en grados Celsius: 25
-    25.0 grados Celsius equivalen a 77.0 grados Fahrenheit.
-
-    --- Conversiones completadas. Gracias! ---
-    ```
-
-4. **Uso de Git**:
-    - Después de completar y probar tu código, asegúrate de que estás en la carpeta raíz `java-course`.
-    - Añade los nuevos archivos al área de staging: `git add .`
-    - Realiza un `commit` con un mensaje descriptivo, por ejemplo: `"feat: Implementado Conversor de Medidas usando variables, constantes, Scanner y var"`
-    - Sube tus cambios a tu repositorio `java-course` en GitHub: `git push origin main` (o `master`).
-5. Comentarios en el Código:
-
-    Asegúrate de que tu código esté bien comentado, explicando la declaración de variables, las constantes utilizadas y la lógica de cada sección de conversión.
-
-### Criterios de Evaluación (para el estudiante)
-
-Tu ejercicio será evaluado en base a los siguientes puntos:
-
-- El programa compila y ejecuta correctamente.
-- Se utilizan variables (con o sin `var` según la conveniencia) para almacenar los datos de entrada y salida.
-- Se utilizan constantes (`final`) para los factores de conversión (incluyendo los valores específicos).
-`- Se aplican correctamente los operadores aritméticos para las conversiones.
-- Se utiliza `Scanner` para la entrada de datos del usuario.
-- La salida en consola es clara, muestra los resultados de las conversiones, y utiliza al menos una vez `System.out.printf()` para formatear la salida de decimales.
-- El código está versionado en GitHub con un `commit` relevante.
-- El código está comentado adecuadamente.
-
-### Retos Adicionales (Opcional)
-
-- Añade una nueva conversión a la aplicación, como Litros a Galones o Kilómetros a Millas.
-- Experimenta con más especificadores de formato en `System.out.printf()` (ej. ancho de campo, alineación).
-- Implementa un pequeño menú para que el usuario elija qué conversión desea realizar (esto puede requerir estructuras de control como `if/else` o `switch`, que se verán en la próxima clase, por lo que es un reto muy avanzado para esta etapa).
