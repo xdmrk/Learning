@@ -4,8 +4,8 @@
 - [Variables](#Variables)
 - [Java es un Lenguaje Fuertemente Tipado](#Java-es-un-Lenguaje-Fuertemente-Tipado)
 - [Tipos de Datos Primitivos](#Tipos-de-Datos-Primitivos)
-- [Inferencia de Tipo con var](#Inferencia-de-Tipo-con-var)
-- [Declaración y Uso de Constantes (`final`)](Declaración-y-Uso-de-Constantes-final)
+- [Inferencia de Tipo con var](#inferencia-de-tipo-con-var-java-10)
+- [Declaración y Uso de Constantes (`final`)](#Declaración-y-Uso-de-Constantes-final)
 
 [Conversión de Tipos (Type Casting)](#conversión-de-tipos-type-casting)
 - [Conversión Implícita (Widening/Ampliación)](#conversi%C3%B3n-impl%C3%ADcita-widening-conversion---ampliaci%C3%B3n)
