@@ -8,7 +8,7 @@
 - [Declaración y Uso de Constantes (`final`)](Declaración-y-Uso-de-Constantes-final)
 
 [Conversión de Tipos (Type Casting)](#conversión-de-tipos-type-casting)
-- [Conversión Implícita (Widening/Ampliación)](#conversión-implícita-widening---ampliación)
+- [Conversión Implícita (Widening/Ampliación)](conversi%C3%B3n-impl%C3%ADcita-widening-conversion---ampliaci%C3%B3n)
 - [Conversión Explícita (Casting/Narrowing/Estrechamiento)](#Conversión-Explícita-castingnarrowingconversionestrechamiento)
 
 [Operadores en Java](#Operadores-en-Java)
