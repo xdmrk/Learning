@@ -9,7 +9,7 @@
 
 [Conversión de Tipos (Type Casting)](#conversión-de-tipos-type-casting)
 - [Conversión Implícita (Widening/Ampliación)](#conversi%C3%B3n-impl%C3%ADcita-widening-conversion---ampliaci%C3%B3n)
-- [Conversión Explícita (Casting/Narrowing/Estrechamiento)](#Conversión-Explícita-castingnarrowingconversionestrechamiento)
+- [Conversión Explícita (Casting/Narrowing/Estrechamiento)](#conversi%C3%B3n-expl%C3%ADcita-casting---narrowing-conversion---estrechamiento)
 
 [Operadores en Java](#Operadores-en-Java)
 - [Operadores Aritméticos](#Operadores-Aritméticos)
