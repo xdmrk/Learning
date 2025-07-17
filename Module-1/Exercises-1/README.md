@@ -1,4 +1,34 @@
-# Variables
+# Variables, Tipos de Datos, Constantes y Operadores
+
+[Fundamentos de Datos en Java](#Fundamentos-de-Datos-en-Java)
+- [Variables](#Variables)
+- [Java es un Lenguaje Fuertemente Tipado](#Java-es-un-Lenguaje-Fuertemente-Tipado)
+- [Tipos de Datos Primitivos](#Tipos-de-Datos-Primitivos)
+- [Inferencia de Tipo con var](#Inferencia-de-Tipo-con-var)
+- [Declaración y Uso de Constantes (final)](Declaración-y-Uso-de-Constantes (final))
+
+[Conversión de Tipos (Type Casting)](#Conversión-de-Tipos (Type Casting))
+- [Conversión Implícita (Widening/Ampliación)](#Conversión-Implícita (Widening Conversion - Ampliación))
+- [Conversión Explícita (Casting/Narrowing/Estrechamiento)](#Conversión-Explícita (Casting - Narrowing Conversion - Estrechamiento))
+
+[Operadores en Java](#Operadores-en-Java)
+- [Operadores Aritméticos](#Operadores-Aritméticos)
+- [Operadores de acumulación (Incremento y Decremento)](#Operadores-de-acumulación (Incremento y Decremento))
+- [Operadores de asignación compuesta](#Operadores-de-asignación-compuesta)
+- [Precedencia de operadores](#Precedencia-de-operadores)
+
+[Entrada y Salida de Datos por Consola y Diferencia Primitivos vs. Objetos](#Entrada-y-Salida-de-Datos-por-Consola-y-Diferencia-Primitivos-vs.-Objetos)
+- [Leyendo Entrada del Usuario con `Scanner`](#Leyendo-Entrada-del-Usuario-con-Scanner)
+- [Salida de Datos por Consola `(System.out)`](#Salida-de-Datos-por-Consola-(System.out))
+- [Primitivos vs. Clases Envolventes (Wrapper Classes)](#Primitivos-vs.-Clases-Envolventes (Wrapper Classes))
+  
+<br>  
+
+## Fundamentos de Datos en Java
+
+Para que un programa haga algo útil, necesita trabajar con información (datos). Las variables son como "cajas" con nombre donde guardamos esos datos.
+
+### Variables
 
 Una **variable** en Java es un contenedor que almacena datos en la memoria durante la ejecución de un programa. Las variables tienen un nombre (identificador), un tipo de dato y un valor que puede cambiar durante la ejecución del programa.
 Inicialmente solo se trabajara con **variables locales** declaradas dentro de métodos, constructores o bloques.
@@ -283,7 +313,7 @@ Una **constante** es una variable cuyo valor, una vez asignado, no puede ser mod
 
 <br>  
 
-# Conversión de Tipos (Type Casting)
+## Conversión de Tipos (Type Casting)
 
 A veces, necesitas convertir un valor de un tipo de dato a otro. Java maneja esto de dos formas:
 
@@ -327,7 +357,7 @@ A veces, necesitas convertir un valor de un tipo de dato a otro. Java maneja est
 
 <br>  
 
-# Operadores en Java
+## Operadores en Java
 
 Los operadores son símbolos que le dicen al compilador que realice distintas operaciones.
 
@@ -478,7 +508,7 @@ Realizan operaciones matemáticas básicas.
 
 <br>  
 
-# Entrada y Salida de Datos por Consola y Diferencia Primitivos vs. Objetos
+## Entrada y Salida de Datos por Consola y Diferencia Primitivos vs. Objetos
 
 ### Leyendo Entrada del Usuario con `Scanner`
 
@@ -518,7 +548,7 @@ Para que tu programa pueda interactuar con el usuario y leer lo que este escribe
       scanner.close(); // Es buena práctica cerrar el Scanner cuando ya no lo necesites
       ```
 
-- **Nota sobre `scanner.nextLine()` después de `nextInt()`/`nextDouble()`**: Cuando usas `nextInt()` o `nextDouble()`, estos métodos leen solo el número, dejando el caracter de "salto de línea" (`\n`) en el buffer de entrada. Si llamas a `nextLine()` inmediatamente después, este leerá ese `\n` vacío y no esperará la entrada real del usuario. Por eso, se suele añadir un `scanner.nextLine()`; extra para "consumir" ese salto de línea pendiente.
+- **Nota sobre `scanner.nextLine()` después de `nextInt()`/`nextDouble()`**: Cuando usas `nextInt()` o `nextDouble()`, estos métodos leen solo el número, dejando el caracter de "salto de línea" (`\n`) en el buffer de entrada. Si llamas a `nextLine()` inmediatamente después, este leerá ese `\n` vacío y no esperará la entrada real del usuario. Por eso, se suele añadir un `scanner.nextLine()` (limpiar buffer); extra para "consumir" ese salto de línea pendiente.
 
 <br>  
 
@@ -589,4 +619,61 @@ Mientras que los tipos primitivos (`int`, `double`, `boolean`, etc.) almacenan d
   - `double` -> `Double`
   - `char` -> `Character`
   - `boolean` -> `Boolean`
+
+Imagina que los tipos primitivos (como int, char, boolean) son como juguetes sueltos, y las wrapper classes son como cajitas donde puedes guardar esos juguetes para manejarlos mejor.
+```Java
+      public class EjemploWrapper {
+        public static void main(String[] args) {
+            // Tipo primitivo (juguete suelto)
+            int numeroPrimitivo = 5;
+            
+            // Wrapper class (metemos el juguete en una caja)
+            Integer numeroEnCaja = Integer.valueOf(numeroPrimitivo);
+            
+            // Podemos hacer cosas con la caja que no podíamos con el primitivo
+            System.out.println("Valor: " + numeroEnCaja);
+            System.out.println("Convertido a String: " + numeroEnCaja.toString());
+            System.out.println("En binario: " + Integer.toBinaryString(numeroEnCaja));
+            
+            // Sacamos el valor de la caja (unboxing)
+            int otroPrimitivo = numeroEnCaja.intValue();
+            System.out.println("Valor otra vez primitivo: " + otroPrimitivo);
+        }
+    }
+```
 - **Autoboxing y Unboxing**: Java realiza automáticamente las conversiones entre primitivos y sus wrappers cuando es necesario (ej. `Integer numero = 10;` esto es `autoboxing`).
+
+```Java
+public class EjemploAuto {
+    public static void main(String[] args) {
+        // Autoboxing: Java convierte automáticamente int a Integer
+        Integer numeroEnCaja = 7;  // igual que Integer.valueOf(7)
+        
+        // Autounboxing: Java convierte automáticamente Integer a int
+        int suma = numeroEnCaja + 3; // igual que numeroEnCaja.intValue() + 3
+        
+        System.out.println("Resultado: " + suma); // Imprime 10
+    }
+}
+```
+
+**¿Por qué es útil?**: Imagina que quieres guardar números en un ArrayList (una lista dinámica):
+
+```Java
+import java.util.ArrayList;
+
+public class EjemploLista {
+    public static void main(String[] args) {
+        // ERROR: ArrayList<int> no se permite, solo acepta objetos
+        // ArrayList<int> listaPrimitiva = new ArrayList<>();
+        
+        // Solución: Usar Integer (wrapper class)
+        ArrayList<Integer> listaNumeros = new ArrayList<>();
+        listaNumeros.add(10);  // Autoboxing convierte automáticamente
+        listaNumeros.add(20);
+        
+        int primerNumero = listaNumeros.get(0); // Autounboxing
+        System.out.println("Primer número: " + primerNumero);
+    }
+}
+```
