@@ -6,7 +6,6 @@
 
 La Programación Orientada a Objetos se basa en dos conceptos principales: **clases** y **objetos**.
 
-![Clases y Objetos](assets/clase_objeto.png)
 
 - **Clase**: Una clase es como un **plano**, una **plantilla** o un **molde** para crear objetos. Define las características (atributos) y las acciones (métodos) que todos los objetos de ese tipo tendrán. No es un objeto en sí misma, sino la descripción de cómo deben ser los objetos de esa categoría.
 
