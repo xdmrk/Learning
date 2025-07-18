@@ -4,7 +4,7 @@
 - [Exercises-2:](Junior/Module-1/Exercises-2) Variables, Tipos de Datos, Constantes y Operadores.
 - [Exercises-3:](Junior/Module-1/Exercises-3) Estructuras de Control de Flujo (Condicionales y Bucles).
 - Exercises-4: Funciones y Modularidad.
-- [Proyect](Junior/Module-1/Proyecto-M1)
+- [Proyect-M1:](Junior/Module-1/Proyecto-M1) Registro de estudiantes
 
 ## Modulo 02 - Programación Orientada a Objetos
 - Exercises-1: Clases, Objetos, Constructores y Encapsulamiento
