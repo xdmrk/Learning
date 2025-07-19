@@ -1,19 +1,19 @@
 # Configuración Profesional del Entorno y Primer Proyecto
-[Preparando el Terreno:](Preparando-el-Terreno-Tu-Entorno-de-Desarrollo-Java)
+[Preparando el Terreno:](#Preparando-el-Terreno-Tu-Entorno-de-Desarrollo-Java)
  - [Instalación del JDK (Java Development Kit)](#instalaci%C3%B3n-del-jdk-java-development-kit)
  - [Visual Studio Code - Tu Editor de Código Ideal](#visual-studio-code---tu-editor-de-c%C3%B3digo-ideal)
  - [Git y GitHub: Control de Versiones y Colaboración](#git-y-github-control-de-versiones-y-colaboraci%C3%B3n)
 
-[Introducción a la Programación y Java](introduccion-a-la-programacion-y-java)
- - [¿Qué es la Programación?](Qué-es-la-Programación)
- - [¿Que es Java?](Que-es-Java)
- - [Desentrañando Java: JVM, JRE y JDK](Desentrañando-Java-JVM-JRE-y-JDK)
+[Introducción a la Programación y Java](#introducci%C3%B3n-a-la-programaci%C3%B3n-y-java)
+ - [¿Qué es la Programación?](#Qué-es-la-Programación)
+ - [¿Que es Java?](#Que-es-Java)
+ - [Desentrañando Java: JVM, JRE y JDK](#Desentrañando-Java-JVM-JRE-y-JDK)
 
-[Tu Primer Programa en Java: "Hola Mundo"](Tu-Primer-Programa-en-Java-Hola-Mundo)
- - [Creando el Archivo `HelloWorld.java`](Creando-el-Archivo-HelloWorld.java)
- - [Entendiendo la Sintaxis Básica de Java](Entendiendo-la-Sintaxis-Básica-de-Java)
- - [Documentando tu Código: Los Comentarios](Documentando-tu-Código-Los-Comentarios)
- - [Proceso de Compilación y Ejecución](Proceso-de-Compilación-y-Ejecución)
+[Tu Primer Programa en Java: "Hola Mundo"](#Tu-Primer-Programa-en-Java-Hola-Mundo)
+ - [Creando el Archivo `HelloWorld.java`](#Creando-el-Archivo-HelloWorld.java)
+ - [Entendiendo la Sintaxis Básica de Java](#Entendiendo-la-Sintaxis-Básica-de-Java)
+ - [Documentando tu Código: Los Comentarios](#Documentando-tu-Código-Los-Comentarios)
+ - [Proceso de Compilación y Ejecución](#Proceso-de-Compilación-y-Ejecución)
 
 <br>  
 
