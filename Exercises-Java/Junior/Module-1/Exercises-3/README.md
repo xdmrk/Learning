@@ -3,7 +3,7 @@
  - [Expresiones Booleanas: La Base de las Decisiones](#expresiones-booleanas-la-base-de-las-decisiones)
  - [La sentencia `if`](#La-sentencia-if)
  - [La sentencia `if-else`](#La-sentencia-if-else)
- - [El Operador Ternario (`? :`)](#El-Operador-Ternario)
+ - [El Operador Ternario (`? :`)](#El-Operador-Ternario--) 
  - [La sentencia `if-else if-else`](#La-sentencia-if-else-if-else)
  - [La sentencia `switch-case`](#La-sentencia-switch-case)
  - [La expresión `switch` (Java 12+)](#La-expresión-switch-Java-12)
