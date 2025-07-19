@@ -1,6 +1,6 @@
 
 
-bin/
-lib/
-.vscode/
+**/bin/          # Ignora TODAS las carpetas 'bin' en cualquier subdirectorio
+**/lib/
+**/.vscode/
 
