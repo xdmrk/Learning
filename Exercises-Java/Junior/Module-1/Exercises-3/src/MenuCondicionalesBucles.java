@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class _1_MenuCondicionalesBucles {
+public class MenuCondicionalesBucles {
     public static void main(String[] args) {       
         int opcion, menu1; //Se declaran las variables para el menu y el sub menu
         Scanner entrada = new Scanner(System.in);

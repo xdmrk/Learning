@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class _2_AnalizadorNumeros {
+public class AnalizadorNumeros {
     public static void main(String[] args) { //Estructur basica de la clase 
         Scanner entrada = new Scanner(System.in); // Objeto para leer entradas del usuario
         int opcion, numero;

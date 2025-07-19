@@ -13,7 +13,7 @@ public class _3_While {
         boolean activo = true;
         while (activo) {
             System.out.println("Procesando...");
-            break; // --> como esta actualmente sin el break seria un ciclo infinito            
+            break; // --> sin el break seria un ciclo infinito            
         }
 
 
