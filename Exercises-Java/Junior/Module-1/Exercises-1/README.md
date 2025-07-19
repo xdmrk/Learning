@@ -264,7 +264,7 @@ El ecosistema de Java puede parecer confuso al principio con estas siglas, pero 
 
 ### Entendiendo la Sintaxis Básica de Java
 
-![Sintaxis Básica de Java](Module-1/SINTAXIS.md)
+![Sintaxis Básica de Java](SINTAXIS.md)
 
 Veamos algunas reglas fundamentales del lenguaje Java:
 
