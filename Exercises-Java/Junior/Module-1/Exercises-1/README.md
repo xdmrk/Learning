@@ -1,10 +1,10 @@
 # Configuración Profesional del Entorno y Primer Proyecto
 [Preparando el Terreno:](Preparando-el-Terreno-Tu-Entorno-de-Desarrollo-Java)
- - [Instalación del JDK (Java Development Kit)](Instalación-del-JDK-JavaDevelopmentKit)
- - [Visual Studio Code - Tu Editor de Código Ideal](Visual-Studio-Code---Tu-Editor-de-Código-Ideal)
- - [Git y GitHub: Control de Versiones y Colaboración](Git-y-GitHub-Control-de-Versiones-y-Colaboración)
+ - [Instalación del JDK (Java Development Kit)](#instalaci%C3%B3n-del-jdk-java-development-kit)
+ - [Visual Studio Code - Tu Editor de Código Ideal](#visual-studio-code---tu-editor-de-c%C3%B3digo-ideal)
+ - [Git y GitHub: Control de Versiones y Colaboración](#git-y-github-control-de-versiones-y-colaboraci%C3%B3n)
 
-[Introducción a la Programación y Java](Introducción-a-la-Programación-y-Java)
+[Introducción a la Programación y Java](introducción-a-la-programación-y-java)
  - [¿Qué es la Programación?](Qué-es-la-Programación)
  - [¿Que es Java?](Que-es-Java)
  - [Desentrañando Java: JVM, JRE y JDK](Desentrañando-Java-JVM-JRE-y-JDK)
