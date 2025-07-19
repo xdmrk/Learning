@@ -10,7 +10,7 @@
  - [Desentrañando Java: JVM, JRE y JDK](#Desentrañando-Java-JVM-JRE-y-JDK)
 
 [Tu Primer Programa en Java: "Hola Mundo"](#Tu-Primer-Programa-en-Java-HolaMundo)
- - [Creando el Archivo `HelloWorld.java`](#Creando-el-Archivo-HelloWorld.java)
+ - [Creando el Archivo `HelloWorld.java`](#creando-el-archivo-helloworldjava)
  - [Entendiendo la Sintaxis Básica de Java](#Entendiendo-la-Sintaxis-Básica-de-Java)
  - [Documentando tu Código: Los Comentarios](#Documentando-tu-Código-Los-Comentarios)
  - [Proceso de Compilación y Ejecución](#Proceso-de-Compilación-y-Ejecución)
@@ -154,11 +154,8 @@ Programar es dar instrucciones a una computadora para que realice tareas especí
 
 - **Algoritmo**: Es una secuencia finita y ordenada de pasos para resolver un problema o realizar una tarea. Piensa en una receta de cocina: son pasos para lograr un plato.
 
-![Huevo Frito](https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2021/11/02/huevo-frito.jpeg)
-
 - **Pensamiento Algorítmico**: Es la habilidad de descomponer un problema grande en pasos más pequeños y manejables, y luego organizar esos pasos lógicamente para llegar a una solución. ¡Es la base de la programación!
 
-[![como hacer un sandwish de mantequilla de mani y mermelada](https://markdown-videos-api.jorgenkh.no/youtube/cDA3_5982h8?width=640&height=360)](https://youtu.be/cDA3_5982h8?si=Xmwa_V04HYXLnt4g)
 
 <br>  
 
@@ -267,7 +264,7 @@ El ecosistema de Java puede parecer confuso al principio con estas siglas, pero 
 
 ### Entendiendo la Sintaxis Básica de Java
 
-![Sintaxis Básica de Java](assets/sintaxis-java.png)
+![Sintaxis Básica de Java](Module-1/SINTAXIS.md)
 
 Veamos algunas reglas fundamentales del lenguaje Java:
 
