@@ -4,7 +4,7 @@
  - [Visual Studio Code - Tu Editor de Código Ideal](#visual-studio-code---tu-editor-de-c%C3%B3digo-ideal)
  - [Git y GitHub: Control de Versiones y Colaboración](#git-y-github-control-de-versiones-y-colaboraci%C3%B3n)
 
-[Introducción a la Programación y Java](introducción-a-la-programación-y-java)
+[Introducción a la Programación y Java](introduccion-a-la-programacion-y-java)
  - [¿Qué es la Programación?](Qué-es-la-Programación)
  - [¿Que es Java?](Que-es-Java)
  - [Desentrañando Java: JVM, JRE y JDK](Desentrañando-Java-JVM-JRE-y-JDK)
