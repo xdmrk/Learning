@@ -9,7 +9,7 @@
  - [¿Que es Java?](#Que-es-Java)
  - [Desentrañando Java: JVM, JRE y JDK](#Desentrañando-Java-JVM-JRE-y-JDK)
 
-[Tu Primer Programa en Java: "Hola Mundo"](#Tu-Primer-Programa-en-Java-Hola-Mundo)
+[Tu Primer Programa en Java: "Hola Mundo"](#Tu-Primer-Programa-en-Java-HolaMundo)
  - [Creando el Archivo `HelloWorld.java`](#Creando-el-Archivo-HelloWorld.java)
  - [Entendiendo la Sintaxis Básica de Java](#Entendiendo-la-Sintaxis-Básica-de-Java)
  - [Documentando tu Código: Los Comentarios](#Documentando-tu-Código-Los-Comentarios)
