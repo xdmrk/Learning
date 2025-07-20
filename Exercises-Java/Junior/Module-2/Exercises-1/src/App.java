@@ -1,24 +1,21 @@
+import java.time.LocalDate;
+
 public class App {
-    public static void main(String[] args) throws Exception //Firma del metodo
-    {
-        // //cuepo de la funcion { }
-        // SumarNu(10, 5); //(10, 5): Argumentos
+    public static void main(String[] args) {
+        Book book1 = new Book(); // -> inicializar llamando el constructor // Book o var si tenemos el
+                                 // constructor inicializado
+        var book2 = new Book("Programacion", "pedro", 900);
+        var book3 = new Book("Learning english", "Duran", 200, LocalDate.of(2010, 10, 21), "English school",
+                "Aprendizaje");
 
-        Perro miMascota = new Perro(); //aqui estoy usando ña clase
-        //miMascota: instancia
-        miMascota.ladrar(); //App es cliente de la clase Perro
+        System.out.println(book1.toString());
+        System.out.println(book2.giveMeYourTitle());
+        System.out.println(book3.toString());
 
+        var person1 = new Persona("Astro", "Toronto");
 
-        Calculadora calculadora = new Calculadora();
-        int miSuma = calculadora.Sumar(1, 9, 11);
-        Pantalla pantalla = new Pantalla();
-        pantalla.mostrar(miSuma);
-
-        int miResta = calculadora.Restar(9,5);
-        pantalla.mostrar(miResta);
+        System.out.println(person1.toString());
 
     }
+
 }
-
-
-        
