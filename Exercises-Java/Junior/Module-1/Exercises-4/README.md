@@ -9,7 +9,7 @@
 
 [Diseño Modular: Dividiendo el Problema](#Diseño-Modular-Dividiendo-el-Problema)
 
-
+<br> 
 
 
 ## Funciones (Métodos): Los Bloques de Construcción
@@ -167,6 +167,8 @@ public class EjemploFuncionesConRetorno {
 
 El tipo de dato que especificas antes del nombre del método (`int`, `boolean`, `String`, etc.) indica el tipo de valor que debes devolver usando `return`. Un método declarado como `void` no puede usar `return` para devolver un valor (solo `return;` para salir anticipadamente).
 
+<br> 
+
 ## Alcance de Variables (Scope)
 
 El alcance de una variable se refiere a la parte del código donde esa variable es accesible.
@@ -213,6 +215,8 @@ El alcance de una variable se refiere a la parte del código donde esa variable 
 Por ahora, nos enfocaremos principalmente en el alcance local.
 
 Comprender el alcance es crucial para evitar errores y escribir código que funcione correctamente.
+
+<br> 
 
 ## Diseño Modular: Dividiendo el Problema
 
