@@ -120,5 +120,3 @@ Modularidad es la práctica de dividir un programa grande y complejo en partes m
 ---
 
 **Consejo Final para la Entrevista**: Además de saber las respuestas, practica explicar los conceptos con tus propias palabras y da ejemplos de código simple para ilustrar tus puntos.
-
-**¡Mucha suerte!**
