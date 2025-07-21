@@ -20,6 +20,7 @@
 
 [Construyendo Lógica con Condicionales y Bucles](#Construyendo-Lógica-con-Condicionales-y-Bucles)
 
+<br> 
 
 ## Tomando Decisiones: Estructuras Condicionales
 Estructuras condicionales o de control son aquellas que permiten ejecutar diferentes bloques de código  _solo si_ una condición específica es verdadera (`true`).
