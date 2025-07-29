@@ -42,15 +42,15 @@ public class Arrays {
         var sc = new Scanner(System.in);
 
         System.out.print("Ingrese el numero de filas: ");
-        var valor = sc.nextInt(); //Numero de filas
-        int[][] boardQuestion = new int[valor][];
+        var tamaño = sc.nextInt(); //Numero de filas
+        int[][] boardQuestion = new int[tamaño][]; //Se define la primera dimension (filas)
 
-        for (int row = 0; row < boardQuestion.length; row++) {
+        for (int row = 0; row < boardQuestion.length; row++) { // Recorriendo cada fila del array
             System.out.printf("Ingrese el numero de columnas de la fila %d: ", (row + 1));
-            valor = sc.nextInt();
-            boardQuestion[row] = new int[valor];           
+            tamaño = sc.nextInt();
+            boardQuestion[row] = new int[tamaño]; //Se define el tamaño del array para la segunda dimension (columnas)    
             
-            for (int column = 0; column < boardQuestion[row].length; column++) {
+            for (int column = 0; column < boardQuestion[row].length; column++) { //Recorriendo cada columna de la fila del tablero
                 System.out.printf("Ingrese el valor para la fila %d, %d: ", (row + 1), (column + 1));   
                 boardQuestion[row][column] = sc.nextInt();             
             }
@@ -61,6 +61,7 @@ public class Arrays {
         System.out.println();
 
         //IMPRESION DEL ARRAY SOLICITADO
+        System.out.println("==== Contenido del tablero ====");
         for (int row = 0; row < boardQuestion.length; row++) { // Fila
             for (int column = 0; column < boardQuestion[row].length; column++) { // Columna
                 System.out.print(boardQuestion[row][column] + " "); // Elementos de cada array 
