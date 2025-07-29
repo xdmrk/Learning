@@ -43,6 +43,9 @@ public class App {
         //Casting
         CanFly animal3 = (CanFly) animal2; 
         animal3.fly();
+        Animal animal4 = (Animal) animal3;
+        animal4.happyBirthday();
+        animal4.makeNoise();
 
 
 
