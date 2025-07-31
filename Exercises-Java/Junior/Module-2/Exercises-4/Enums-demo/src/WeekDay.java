@@ -22,7 +22,7 @@ public enum WeekDay { // una clase tipo enumns
     }
 
     @Override
-    public String toString() {
+    public String toString() { // Imprimira Lunes
         return getName();
     }
 
