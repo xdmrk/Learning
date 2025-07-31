@@ -374,7 +374,7 @@ public class CompanyApp {
 
 Ambas clases se conocen. Implementación con atributos de referencia en ambas clases. Gestión cuidadosa en constructores/setters. Las restricciones se implementan con lógica.
 
-## 3. Abstracción con Clases Abstractas y Interfaces
+## 3. Abstracción con Clases Abstractas e Interfaces
 
 Ya introdujimos las clases abstractas y las interfaces como herramientas para la abstracción. Ahora, veamos cómo se usan estratégicamente en el diseño de sistemas con relaciones.
 
