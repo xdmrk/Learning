@@ -14,6 +14,7 @@ class Perro(Animal): # clase hija
         super().__init__(nombre, edad) # Llama al constructor de clase padre
         self.raza = raza
 
+# POLIMORFISMO
     def mostrarInformacion(self):
         return f"Nombre: {self.nombre}, edad: {self.edad}, raza: {self.raza}"
     

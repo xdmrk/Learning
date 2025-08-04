@@ -87,8 +87,9 @@ class Persona4: #Atributos publicos, privados y protegidos
     def get_edad(self): # get: acceder al atributo privado
         return self.__edad
 
+    @property # Informa que es metodo getter
     def saludo(self):
-        print(f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años y vivo en {self.ciudad}")
+        print(f"Hola, mi nombre es {self.nombre} y tengo {self.__edad} años y vivo en {self._ciudad}")
 
 persona1 = Persona("Astro", 25)
 persona1.saludo()

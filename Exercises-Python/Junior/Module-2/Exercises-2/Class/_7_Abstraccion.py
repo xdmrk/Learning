@@ -5,7 +5,7 @@ class Forma(ABC):
     def calcular_area(self):
         return "No deberias estar aqui"
     
-    # sin el decorador se podra llamar
+    # sin el decorador se podra llamar sin sobreescribirgitt 
     def calcular_perimetro(self):
         return "No deberias estar aqui"
     
