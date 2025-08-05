@@ -1,0 +1,13 @@
+@startuml
+
+class Publicacion { # -privados , +publicos
+    -contenido: String
+    -fechaPublicacion: Date
+    -cantidadLike: int 
+
+    +darLike(): void 
+    +comentar(comentario: String): void
+    +eliminar(): void
+}
+
+@enduml
