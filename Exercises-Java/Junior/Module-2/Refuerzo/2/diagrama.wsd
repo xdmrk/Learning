@@ -1,13 +1,34 @@
-@startuml
-
-class Publicacion { # -privados , +publicos
+@startuml Ejercicio Redes Sociales
+class Publicacion { 
     -contenido: String
     -fechaPublicacion: Date
     -cantidadLike: int 
+    -comentarios: List<String>
 
     +darLike(): void 
-    +comentar(comentario: String): void
+    +comentar(comentario: String, usuario: Usuario): void
     +eliminar(): void
 }
 
-@enduml
+class Comentario {
+    -usuario: Usuario
+    -fecha: Date 
+    -contenido: String
+}
+
+class Usuario {
+    -nombre: String
+    -correo: String
+    -publicaciones: List<Publicaciones>
+
+    +addPublicacion(comentario: Comentario): void
+    +crearPublicacion(contenido: String): void
+}
+
+Usuario "0" o-- "*" Publicacion: crea
+@enduml 
+
+/*
+comentario esto es uno, se puede crear una clase si esta tiene mas de un atributo
+Comentario tiene un atributo de tipo objeto usuario de la clase Usuario
+*/
