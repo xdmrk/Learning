@@ -1,0 +1,57 @@
+@startuml Restaurante
+
+class Restuaurant {
+    name: String 
+    address: String
+}
+
+class Table {
+    number: Integer 
+    capacity: Integer 
+    isOccupied: Boolean
+
+}
+
+class MenuItem {
+    name: String 
+    price: Double
+}
+
+class OrderItem {
+    quantity: Integer
+}
+
+class Order {
+    orderNumber: Integer 
+}
+
+enum OrderStatus {
+    PENDING 
+    IN_PROGRESS
+    DELIVERED
+}
+
+class Menu {
+    name: String 
+}
+
+class Employee {
+    name: String
+
+    Employee(String name)
+    String getName()    
+}
+/' comentarios '/
+' o-- Agregación    -> Parte de
+'  -- Asociación    -> Parte de ()
+' *-- Composición   -> usa, necesita, esta relacionado (obligatorio)
+' --> Dependencia   
+Restuaurant "1"     o-- "1..*"Table 
+Restuaurant "1"     o-- "2..50"Employee
+Restuaurant "1"     *-- "1..*"Menu
+Table "1"           -- "0..*"Order
+Menu "1"            *-- "1..*"MenuItem : menuItems
+MenuItem "1"        --o "0..*"OrderItem
+Order"1"            *-- "1..*"OrderItem
+Order               --> OrderStatus: status
+@enduml
