@@ -50,7 +50,7 @@ Restuaurant "1"     o-- "1..*"Table
 Restuaurant "1"     o-- "2..50"Employee
 Restuaurant "1"     *-- "1..*"Menu
 Table "1"           -- "0..*"Order
-Menu "1"            *-- "1..*"MenuItem : menuItems
+Menu "1"            *-- "1"MenuItem : menuItems
 MenuItem "1"        --o "0..*"OrderItem
 Order"1"            *-- "1..*"OrderItem
 Order               --> OrderStatus: status
