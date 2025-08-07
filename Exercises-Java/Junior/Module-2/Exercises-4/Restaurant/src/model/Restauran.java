@@ -4,15 +4,15 @@ public class Restauran {
     private String name;
     private String address;
     private Table[] tables;
-    private Menu menus;
+    private Menu menu;
     private Employee[] employees;
 
 
-    public Restauran(String name, String address, Table[] tables, Menu menus, Employee[] employees) {
+    public Restauran(String name, String address, Table[] tables, Menu menu, Employee[] employees) {
         this.name = name;
         this.address = address;
         this.tables = tables;
-        this.menus = menus;
+        this.menu = menu;
         this.employees = employees;
     }
 
@@ -32,8 +32,8 @@ public class Restauran {
     }
 
 
-    public Menu getMenus() {
-        return menus;
+    public Menu getMenu() {
+        return menu;
     }
 
 
@@ -51,8 +51,18 @@ public class Restauran {
 
 
     public void displayMenu() {
-        Menu.displayItems();
+        menu.displayItems();
     }
+
+    public Table findTable(int tableNumber){
+        for (int i = 0; i < tables.length; i++) {
+            if(tables[i] != null && tables[i].getTableNumber() == tableNumber) { // o .equals(tableNumber), ya que es un Integer a int
+                return tables[i];
+            }
+        }
+        return null;
+    }
+
 
     
 

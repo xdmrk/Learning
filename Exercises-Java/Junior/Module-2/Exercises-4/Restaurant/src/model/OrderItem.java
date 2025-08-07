@@ -31,4 +31,8 @@ public class OrderItem {
         return order;
     }
 
+    public Double calculateSubtotal() {
+        return menuItem.getPrice() * quantity;
+    }
+
 }

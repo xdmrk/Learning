@@ -20,14 +20,17 @@ public class MenuItem {
         return price;
     }
 
-    public Menu getMenu() {
-        return menu;
-    }
-
     public void setPrice(Double price) {
         this.price = price;
     }
 
-    
+    public Menu getMenu() {
+        return menu;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s: \t$ %,.2f", name, price);
+    }
 
 }

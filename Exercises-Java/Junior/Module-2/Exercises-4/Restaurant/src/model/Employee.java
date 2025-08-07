@@ -16,6 +16,10 @@ public class Employee {
     public void setRestauran(Restauran restauran) {
         this.restauran = restauran;
     }
+
+    public String getName() {
+        return name;
+    }
     
 
 
