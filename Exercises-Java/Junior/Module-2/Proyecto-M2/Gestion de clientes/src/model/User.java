@@ -16,7 +16,17 @@ public class User {
         this.lastName = lastName;
         this.username = username;
         this.password = password;
-        this.rol = rol.STANDARD;
+        this.rol = Rol.STANDARD;
+        this.id = contador;
+        contador++;
+    }
+
+    public User(String name, String lastName, Integer id, String username, String password, Rol rol) {
+        this.name = name;
+        this.lastName = lastName;
+        this.username = username;
+        this.password = password;
+        this.rol = rol;
         this.id = contador;
         contador++;
     }
@@ -49,6 +59,10 @@ public class User {
         this.username = username;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -56,4 +70,13 @@ public class User {
     public History[] getHistory() {
         return history;
     }
+
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
+
 }

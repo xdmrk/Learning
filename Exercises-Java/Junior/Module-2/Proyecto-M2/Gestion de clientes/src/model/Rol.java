@@ -1,6 +1,6 @@
 package model;
 
-public enum Rol {
+public enum Rol implements GestionUsers {
     ADMIN {},
     STANDARD {},
     GUEST;
