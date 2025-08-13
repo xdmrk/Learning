@@ -1,0 +1,36 @@
+@startuml Gestion de Clientes 
+class User {
+    name: String 
+    apellido: String 
+    id: Integer
+    username: String
+    contraseña: String
+}
+
+enum Roles {
+    ADMIN
+    STANDARD
+    GUEST
+}
+
+interface GestionUsers {
+    login()
+    addUser()
+    deleteUser()
+    searchUser()
+    updateUser()
+    modName()
+    modContra()
+
+}
+
+class History {
+    description: String
+    date: datetime 
+}
+
+User    *-left-     Roles
+User"1"    --*     "1"History
+Roles -- GestionUsers : operaciones
+
+@enduml
