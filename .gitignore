@@ -1,7 +1,9 @@
-
-# Ignora TODAS las carpetas 'bin' en cualquier subdirectorio
+# Ignora TODAS las **/carpetas_nombre/ en cualquier subdirectorio
 
 **/bin/          
 **/lib/
 **/.vscode/
+
+# Ignora nombre_archivo
+desktop.ini
 
