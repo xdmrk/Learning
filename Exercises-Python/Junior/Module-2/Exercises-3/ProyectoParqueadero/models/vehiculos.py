@@ -1,4 +1,4 @@
-import datatime
+import datetime
 
 class Vehiculo:
     def __init__(self, tipo, altura, placa):
@@ -60,7 +60,7 @@ class FabricaVehiculos:
             return Vehiculo("Camion", 3.0)
         else:
             raise ValueError("Tipo de vehiculo no valido")
-            """
+"""
 
 class FabricaVehiculos:
     @staticmethod
@@ -165,7 +165,7 @@ class Parqueadero:
 
             self._espacios.asignarEspacio(vehiculo)
             
-            vehiculo.horaEntrada = datatime.datetime.now()
+            vehiculo.horaEntrada = datetime.datetime.now()
             
             return True, f"El vehiculo tipo {tipo} con placa {placa} ingreso exitosamente"
         
@@ -182,7 +182,7 @@ class Parqueadero:
             if vehiculoLiberado is False:
                 return False, f"No se pudo liberar el espacio para el vehiculo con placa {placa}"
             
-            vehiculo.horaSalida = datatime.datetime.now()
+            vehiculo.horaSalida = datetime.datetime.now()
             costo = self._calculadora.calcular(vehiculo.horaEntrada, vehiculo.horaSalida)
 
             self._repositorio.eliminar(placa)
@@ -197,7 +197,3 @@ class Parqueadero:
     
     def obtenerVehiculoXplaca(self, placa):
         return self._repositorio.obtenerXplaca(placa)
-        
-        
-
-            

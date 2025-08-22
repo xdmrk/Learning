@@ -1,7 +1,6 @@
 from models.estudiante import Estudiante
 
-#clase controlador de Estudiantes
-class controllerEstudiantes:
+class ControllerEstudiante:
     def __init__(self):
         self.estudiantes = []
 
@@ -14,32 +13,31 @@ class controllerEstudiantes:
         return True
 
     def mostrarEstudiantes(self):
-        for estudiante in self.estudiantes:
-            return estudiante
+        return self.estudiantes
         
     def mostrarEstudiantePorDocumento(self, documento):
         for estudiante in self.estudiantes:
             if estudiante.documento == documento:
                 return estudiante
+        return None
             
     def mostrarEstudiantePorEmail(self, email):
         for estudiante in self.estudiantes:
             if estudiante.email == email:
                 return estudiante
-        
-    def actualizarEstudiante(self, documento, estudiante: Estudiante):
+        return None
+            
+    def actualizarEstudiante(self, documento, nombre, apellido):
         for estudiantes in self.estudiantes:
             if estudiantes.documento == documento:
-                estudiantes.documento = estudiante.documento
-                estudiantes.nombre = estudiante.nombre
-                estudiantes.apellido = estudiante.apellido
-                estudiantes.email = estudiante.email
+                estudiantes.nombre = nombre
+                estudiantes.apellido = apellido
                 return True
-    
+        return False
+
     def eliminarEstudiante(self, documento):
-        for estudiante in self.estudiantes:
-            if estudiante.documento == documento:
-                self.estudiantes.remove(estudiante)
+        for estudiantes in self.estudiantes:
+            if estudiantes.documento == documento:
+                self.estudiantes.remove(estudiantes)
                 return True
-
-
+        return False
