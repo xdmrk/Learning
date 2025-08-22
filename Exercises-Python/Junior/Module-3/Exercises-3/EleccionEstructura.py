@@ -24,3 +24,4 @@ biblioteca = {
         {"libro": "Cien años de soledad", "usuario": "carlos", "fecha": "2024-12-01"}
     ]
 }
+print(biblioteca)
