@@ -1,0 +1,6 @@
+2025-08-31 14:56:16 %-5s Main:10 - Iniciando la app
+2025-08-31 14:56:16 %-5s Empleado:20 - El empleado Juan es menor de edad
+2025-08-31 14:56:16 %-5s Main:16 - Informacion del empleado: Empleado{nombre='Juan', edad=16, salario=850000.0}
+2025-08-31 14:56:16 %-5s Main:17 - Informacion del gerente: Gerente{departamento='Ventas'} Empleado{nombre='Pablo', edad=40, salario=5000000.0}
+2025-08-31 14:56:16 %-5s Main:23 - Informacion del empleado: Empleado{nombre='Juan', edad=16, salario=850010.0}
+2025-08-31 14:56:16 %-5s Main:24 - Informacion del empleado: Gerente{departamento='Ventas'} Empleado{nombre='Pablo', edad=40, salario=5000020.0}
