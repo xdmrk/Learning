@@ -43,6 +43,6 @@ Son **condiciones anómalas** que ocurren durante la ejecución de un programa y
 public static void main(String arg[]) {
     int [] array = new int[20];
     array[-3] = 24;
-}
+}  
 ´´´
 
