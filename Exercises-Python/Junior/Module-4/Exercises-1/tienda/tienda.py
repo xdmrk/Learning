@@ -57,6 +57,17 @@ def recuperar_autoIncrement():
         ultima_linea = lineas[-1].strip()
         auto_increment = int(ultima_linea.split("=")[1])
         return auto_increment
+    
+def validar_archivo():
+    if not os.path.exists(ARCHIVO_PRODUCTOS):
+        crear_archivo()
+        return True
+    return True
+
+def crear_archivo():
+    with open(ARCHIVO_PRODUCTOS, "w", encoding="utf-8") as archivo:
+        archivo.write("ID#Nombre#Precio#Stock\n")
+        archivo.write("AUTO_INCREMENT=0")
 
 # def guardar_productos():
 #     pass
