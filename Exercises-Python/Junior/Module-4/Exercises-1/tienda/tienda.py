@@ -76,6 +76,29 @@ def guardar_productos(productos,auto_increment):
             archivo.write(f"{p['id']}#{p['nombre']}#{p['precio']}#{p['stock']}\n")
         archivo.write(f"AUTO_INCREMENT={auto_increment}")
 
+def mostrar_productos():
+    pass
+
+def agregar_producto():
+    productos = leer_productos()
+    auto_increment = recuperar_autoIncrement()
+
+    nombre = input("Nombre del producto: ")
+    precio = float(input("Precio: "))
+    stock = int(input("Stock: "))
+
+    auto_increment +=1
+
+    productos.append({
+        "id": auto_increment,
+        "nombre": nombre,
+        "precio": precio,
+        "stock": stock
+    })
+    guardar_productos(productos,auto_increment)
+    print(f"Producto agregado con exito")
+
+
 
 # def guardar_productos():
 #     pass
