@@ -98,21 +98,37 @@ def agregar_producto():
     guardar_productos(productos,auto_increment)
     print(f"Producto agregado con exito")
 
+def vender_producto():
+    productos = leer_productos()
+    auto_increment = recuperar_autoIncrement()
 
+    if not productos:
+        print("No hay productos para vender")
+        return
+    
+    id_ = int(input("Ingrese el ID del producto a vender: "))
+    cantidad = int(input("Ingrese cantidad: "))
 
-# def guardar_productos():
-#     pass
+    for p in productos:
+        if p["id"] == id_:
+            if p["stock"] >= cantidad:
+                p["stock"] -= cantidad
+                print(f"Venta realizada {cantidad} {p['nombre']}(s)")
+            else:
+                print("No hay productos stock")
+        else:
+            print("No hay producto")
 
-# def mostrar_productos():
-#     pass
+    guardar_productos(productos, auto_increment)
+    
+vender_producto()
 
-# def agregar_producto():
-#     pass
+def menu():
+    while True:
+        print("TIENDA DEV SENIOR")
+        print("1. Mostrar productos")
+        break
 
-# def vender_producto():
-#     pass
-
-# def menu():
-#     while True:
-#         print(" ===== TIENDA =====")
-#         print("1. Mostrar productos")
+if __name__ == "__main__":
+    if validar_archivo():
+        menu()
