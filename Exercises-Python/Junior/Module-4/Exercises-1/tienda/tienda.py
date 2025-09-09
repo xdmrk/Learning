@@ -7,7 +7,7 @@ ARCHIVO_PRODUCTOS = os.path.join(os.path.dirname(__file__), "productos.txt")
 # os.path.dirname(__file__): Extrae solo el directorio del archivo ("C:/Users/....tienda/)
 # os.path.join(): Une rutas de manera inteligente, usando el separador correcto del sistema ("C:/Users/....tienda/productos.txt)
 
-
+'''
 def leer_productos():
     productos = []
     if os.path.exists(ARCHIVO_PRODUCTOS): #Este archivo existe
@@ -31,8 +31,32 @@ def leer_productos():
                         "stock": int(stock)
                     })
     return productos
+    '''
+def leer_productos():
+    productos = []
+    if os.path.exists(ARCHIVO_PRODUCTOS): #Este archivo existe
+        with open(ARCHIVO_PRODUCTOS, "r", encoding="utf-8") as archivo:
+            lineas = archivo.readlines()
+            for linea in lineas[1:-1]:
+                if linea:
+                    
+                    _id,nombre,precio,stock = linea.split("#")
 
-print(leer_productos())
+                    productos.append({
+                        "id": int(_id),
+                        "nombre": nombre,
+                        "precio": float(precio),
+                        "stock": int(stock)
+                    })
+    return productos
+
+def recuperar_autoIncrement():
+    #Leer AUTO_INCREMENT
+    with open(ARCHIVO_PRODUCTOS, "r", encoding="utf-8") as archivo:
+        lineas = archivo.readlines()
+        ultima_linea = lineas[-1].strip()
+        auto_increment = int(ultima_linea.split("=")[1])
+        return auto_increment
 
 # def guardar_productos():
 #     pass
