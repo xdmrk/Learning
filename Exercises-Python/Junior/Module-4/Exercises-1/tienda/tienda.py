@@ -69,6 +69,14 @@ def crear_archivo():
         archivo.write("ID#Nombre#Precio#Stock\n")
         archivo.write("AUTO_INCREMENT=0")
 
+def guardar_productos(productos,auto_increment):
+    with open(ARCHIVO_PRODUCTOS, "w", encoding="utf-8") as archivo:
+        archivo.write("ID#Nombre#Precio#Stock\n")
+        for p in productos:
+            archivo.write(f"{p['id']}#{p['nombre']}#{p['precio']}#{p['stock']}\n")
+        archivo.write(f"AUTO_INCREMENT={auto_increment}")
+
+
 # def guardar_productos():
 #     pass
 
