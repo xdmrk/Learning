@@ -129,6 +129,6 @@ def menu():
         print("1. Mostrar productos")
         break
 
-if __name__ == "__main__":
+if __name__ == "__main__":  
     if validar_archivo():
         menu()
