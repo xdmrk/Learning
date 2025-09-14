@@ -1,5 +1,5 @@
 import os 
-
+  
 ARCHIVO_PRODUCTOS = os.path.join(os.path.dirname(__file__), "productos.txt")
 
 # Necesario ya que me ejecutaba desde la carpeta Exercises y no desde tienda, por lo que no  encontraba el archivo
